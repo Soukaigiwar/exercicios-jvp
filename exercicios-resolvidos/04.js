@@ -18,14 +18,22 @@ const tarantinoMovies = [
     { name: 'À Prova de Morte', release: 2007 },
     { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
+
+// Na correção do Roger ele demonstra que não precisa do if() por que
+// o objeto já é adicionado caso o retorno implícito da função retorne true.
+// Além de usar o destructuring pegando somente o release para reduzir a escrita do código.
   
-const moviesReleasedBefore2000Year = tarantinoMovies.filter(movie => {
-    if (movie.release < 2000) {
-        return {
-            name: movie.name,
-            release: movie.release
-        }
-    }
-})
+// const moviesReleasedBefore2000Year = tarantinoMovies.filter(movie => {
+//     if (movie.release < 2000) {
+//         return {
+//             name: movie.name,
+//             release: movie.release
+//         }
+//     }
+// })
+
+// console.log(moviesReleasedBefore2000Year)
+
+const moviesReleasedBefore2000Year = tarantinoMovies.filter(({ release }) => release < 2000)
 
 console.log(moviesReleasedBefore2000Year)
