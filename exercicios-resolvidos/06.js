@@ -23,6 +23,7 @@ const cart = [
   - Nome 3
   */
 
-const cartWithNameOnly = cart.reduce((acc, item) => acc += `- ${item.name}\n`, "")
+// usado desctructuring e transformado string + string em template string
+const cartWithNameOnly = cart.reduce((acc, { name } => `${acc}- ${name}\n`, "")
 
 console.log(cartWithNameOnly)
