@@ -15,6 +15,7 @@ const tvShows = [
     { name: 'Watchmen', releaseYear: 2019 }
 ]
   
-const tvShowsName = tvShows.map(tvShow => tvShow.name)
+// reduzida a escrita usando destructuring 
+const tvShowsName = tvShows.map(({ name }) => name)
 
 console.log(tvShowsName)
